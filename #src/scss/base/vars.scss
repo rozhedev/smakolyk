@@ -1,20 +1,19 @@
 // * DEFAULT FONT
-$font-family: "Open Sans";
-$font-size: 18px;
-$font-size-mobile: 16px;
+$font-family: "Arimo";
+$font-size: 16px;
 
 // * GRID (MY DEFAULT GRID)
 $max-width: 1920px;
-$grid-gap: 32px !default;
+$grid-gap: 30px !default;
 $grid-gap-side: calc($grid-gap / 2);
 
 $container-max-widths: (
-    xs: 336px,
+    xs: 344px,
     sm: 512px,
     md: 696px,
     lg: 936px,
     xl: 1072px,
-    xxl: 1312px,
+    xxl: 1280px,
 );
 
 $grid-breakpoints: (
@@ -26,16 +25,22 @@ $grid-breakpoints: (
 );
 
 // * COLORS
-$dark-color: #252525;
-$light-color: #FFFFFF;
-$primary-accent-color: #E0BEA2;
-$secondary-accent-color: #CCA88A;
-$success-green: #007560;
-$error-red: #C35354;
+$dark-color: #0F0505;
+$dark-gray-color: #878282;
+$light-gray-color: #ADA5A3;
+$footer-gray-color: #F0EFEF;
+$light-color: #FFF6F4;
+$text-light-color: #FFFFFF;
+$primary-accent-color: #9A0014;
+$secondary-accent-color: #5765C6;
+$success-green: #2F6200;
 
 // * EFFECTS
 $transition: .6s all;
-$border: 1px solid $dark-color;
-$shadow: 0 0 2px 4px #000;
+$btn-inset-shadow: inset -2px 2px 5px 3px rgba(0, 0, 0, 0.25);
+$card-inset-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+$input-inset-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+$input-shadow: 0px 0px 6px 1px rgba(154, 0, 20, 0.5);
+$checkbox-shadow: 0px 0px 5px 0px rgba(154, 0, 20, 0.5);
 
 // * OTHER

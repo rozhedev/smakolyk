@@ -1,18 +1,134 @@
 .header {
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: $light-color;
 
-    // * 1024
-
-    @include bp(lg) {
+    .container {
+        display: flex;
+        padding: 0rem 2rem;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+        @include bp(md) {
+            padding: 0rem 1.5rem;
+        }
     }
-    
-    // * 768
+}
+
+.logo {
+    display: inline-block;
+    font-family: 'Lyrica Deco', sans-serif;
+    font-size: 1.75rem;
+    letter-spacing: 0.04em;
+    line-height: 2rem;
+    padding: 0 0.25rem;
+    background-color: $primary-accent-color;
+    color: $text-light-color;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+    .social {
+        display: flex;
+        margin-left: 2.5rem;
+        @include bp(md) {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+    &__icon {
+        display: none;
+    }
+    &__list {
+        display: flex;
+        & > li:not(:first-of-type) {
+            position: relative;
+            margin-left: 2rem;
+        }
+    }
+
+    // * ADAPTIVE
 
     @include bp(md) {
+        .menu__icon {
+            display: block;
+            cursor: pointer;
+            transition: $transition;
+            &._active {
+                transform: rotate(90deg);
+            }
+        }
+        .menu__body {
+            flex-direction: column;
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($light-color, $alpha: 0.8);
+            padding: 8rem 2rem 2rem 2rem;
+            transition: $transition;
+            overflow: auto;
+        }
+        .menu__body._active {
+            left: 0;
+        }
+        .menu__list {
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center;
+            & > li {
+                margin: 0rem 0rem 3.5rem 0rem;
+            }
+        }
     }
+}
 
-    // * 375
-
-    @include bp(sm) {
+.social {
+    display: flex;
+    & > .social-item:not(:first-of-type) {
+        margin-left: 1rem;
+        @include bp(md) {
+            margin-left: 2.5rem;
+        }
     }
+    .social-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: $secondary-accent-color;
+        fill: $text-light-color;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: $transition;
+
+        @include hover {
+            background-color: scale-color($color: $secondary-accent-color, $lightness: -50%);
+        }
+        @include bp(md) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+
+// * SERVICE CLASSES
+
+body._touch .menu__list > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body._touch .menu__link {
+    flex: 1 1 auto;
 }

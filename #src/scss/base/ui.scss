@@ -1,74 +1,84 @@
 // * <UI CLASSES>==========================================
 
 .section {
-    @include bp(md) {
+    @include bp(lg) {
     }
 }
 
 .section-page {
-    @include bp(md) {
+    @include bp(lg) {
     }
 }
 
 .h1 {
-    font-size: 40px;
-    
-    @include bp(md) {
-    }
+    font-family: 'Traditional', 'Garamond', 'Georgia', serif;
+    font-size: 3.625rem;
+    line-height: 5rem;
+    letter-spacing: 0.08em;
 }
 
 .h2 {
-    font-size: 32px;
-    
-    @include bp(md) {
+    font-family: 'Traditional', 'Garamond', 'Georgia', serif;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 0.06em;
+
+    @include bp(lg) {
+        font-size: 1.75rem;
     }
 }
 
 .h3 {
-    
-    @include bp(md) {
-    }
-}
+    font-family: 'Traditional', 'Garamond', 'Georgia', serif;
+    font-size: 1.375rem;
+    line-height: 2.25rem;
+    line-height: 0.02em;
 
-.h4 {
-    
-    @include bp(md) {
-    }
-}
-
-.price {
-    
-    @include bp(md) {
-    }
-}
-
-.descr {
-    
-    @include bp(md) {
+    @include bp(lg) {
+        font-size: 1.125rem;
+        line-height: 2rem;
     }
 }
 
 .navlink {
-    
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    color: $dark-color;
+    transition: $transition;
     @include hover {
+        color: $primary-accent-color;
+        text-decoration: underline;
     }
     @include bp(md) {
+        font-size: 2rem;
     }
+}
+
+.link {
+    display: inline-block;
+    color: $secondary-accent-color;
+    text-decoration: underline;
+
+    @include hover {
+        text-decoration: none;
+    }
+}
+
+body .descr:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.descr {
+    text-indent: 1.5rem;
+}
+
+.text-subtitle {
+    font-weight: 600;
+    text-indent: 1.5rem;
 }
 
 .label {
-    
-    @include bp(md) {
-    }
-}
-
-.btn {
-    
-    @include hover {
-    }
-    &:active {
-    }
-
-    @include bp(md) {
-    }
+    font-weight: 600;
 }

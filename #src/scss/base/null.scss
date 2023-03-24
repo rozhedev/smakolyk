@@ -29,12 +29,8 @@ html {
     font-size: $font-size;
     font-family: $font-family, sans-serif;
     font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0.02em;
-
-    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
-        font-size: $font-size-mobile;
-    }
+    line-height: 1.5;
+    color: $dark-color;
 }
 html,
 body {
@@ -89,6 +85,24 @@ h5,
 h6 {
     font-weight: inherit;
     font-size: inherit;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    background-image: none;
+    flex: 1;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: $dark-color;
+}
+
+select::-ms-expand {
+    display: none;
 }
 //-webkit-overflow-scrolling: touch;
 /*

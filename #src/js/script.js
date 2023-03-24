@@ -7,5 +7,4 @@ import "./modules/validation";
 
 // * COMPONENTS
 import "./components/preloader";
-import "./components/select";
 import "./components/burger";
