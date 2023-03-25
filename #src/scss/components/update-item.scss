@@ -6,16 +6,22 @@
         display: flex;
         flex-direction: column;
         margin-top: 1.5rem;
+        text-align: justify;
+        @include bp(sm) {
+margin-top: 0;        }
     }
     .update-item__img {
         width: 16rem;
         aspect-ratio: 3 / 4;
         object-fit: cover;
+        @include bp(sm) {
+            display: none;
+        }
     }
     .text-subtitle {
         text-indent: 1.5rem;
     }
-    & > .btn {
+    & .btn {
         margin: 1.5rem auto 0;
         width: 70%;
     }

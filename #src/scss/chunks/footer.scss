@@ -1,4 +1,18 @@
 .footer {
-    @include bp(md) {
+    margin-top: 72px;
+    padding: 2.5rem 0;
+    background-color: $footer-gray-color;
+    &__copyright {
+        font-family: "Arimo", sans-serif;
+        font-size: 1.75rem;
+        line-height: 3.25rem;
+        letter-spacing: 0.04em;
+    }
+    .navlink {
+        margin-top: 1rem;
+        font-weight: bold;
+        @include bp(md) {
+            font-size: 1.25rem;
+        }
     }
 }

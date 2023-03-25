@@ -8,7 +8,7 @@
         text-align: center;
     }
     .inner {
-        margin-top: 2.5rem;
+        margin: 2.5rem auto 0;
     }
 }
 
@@ -39,7 +39,7 @@
     font-family: 'Traditional', 'Garamond', 'Georgia', serif;
     font-size: 1.375rem;
     line-height: 2.25rem;
-    line-height: 0.02em;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
 
     @include bp(md) {
