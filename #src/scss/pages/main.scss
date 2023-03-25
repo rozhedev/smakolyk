@@ -1,4 +1,7 @@
 .promo {
+    // * For prevent margin from standart layout in ui.scss
+    margin-top: 0 !important;
+
     @include bp(xl) {
         min-height: 50vh;
     }

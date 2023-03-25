@@ -63,7 +63,6 @@
         }
         &__img {
             width: 100%;
-            object-fit: cover;
             aspect-ratio: 2 / 1;
             @include bp(xl) {
                 aspect-ratio: 5 / 3;

@@ -8,12 +8,12 @@
         margin-top: 1.5rem;
         text-align: justify;
         @include bp(sm) {
-margin-top: 0;        }
+            margin-top: 0;
+        }
     }
     .update-item__img {
         width: 16rem;
         aspect-ratio: 3 / 4;
-        object-fit: cover;
         @include bp(sm) {
             display: none;
         }

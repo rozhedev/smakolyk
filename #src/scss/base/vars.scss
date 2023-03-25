@@ -4,7 +4,7 @@ $font-size: 16px;
 
 // * GRID (MY DEFAULT GRID)
 $max-width: 1920px;
-$grid-gap: 28px !default;
+$grid-gap: 28px !default; // * don't change to rem and etc.
 $grid-gap-side: calc($grid-gap / 2);
 
 $container-max-widths: (
@@ -33,6 +33,7 @@ $light-color: #FFF6F4;
 $text-light-color: #FFFFFF;
 $primary-accent-color: #9A0014;
 $secondary-accent-color: #5765C6;
+$inactive-blue: #35618F;
 $success-green: #2F6200;
 
 // * EFFECTS

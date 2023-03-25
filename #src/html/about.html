@@ -1,24 +1,51 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 
 @@include('chunks/_head.html',{
-"title":"Про нас"
+"title":"Головна"
 })
 
 <body>
-    @@include('chunks/_preloader.html',{})   
+    @@include('chunks/_preloader.html',{})
 
     <div class="wrapper">
-        <main class="about page" id="about">
-            <section class="about-info" id="about-info">
-                <!-- * HEADER -->
-                @@include('chunks/_header.html',{})
+        <!-- * HEADER -->
+        @@include('chunks/_header.html',{})
 
+        <main class="main page" id="main">
+            <!-- * ABOUT INFO -->
+
+            <section class="section about-info" id="about-info">
                 <div class="container">
-                    <div class="content">
-                        <h2 class="title h2">О компании</h2>
-                        <p>Наша компания самая лучшая.</p><br>
-                        <a href="index.html">На главную</a>
+                    <h2 class="h2">Про нас</h2>
+                    <div class="inner">
+                        <div class="about-info__content">
+                            <blockquote class="quote">
+                                Насолоджуйся смаком улюблених вебновел рідною мовою...
+                            </blockquote>
+                            <p class="descr">
+                                “Команда Смаколиків” - це велика дружня родина, яку об’єднує єдина мета - зробити азійські художні твори доступними для вітчизняного читача. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+                                consequat sunt nostrud amet.
+
+                            </p>
+                            <p class="descr">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
+                                mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia.
+                            </p>
+                        </div>
+                        <div class="about-info__img">
+                            <img src="img/photos/about-company.jpg" alt="about-company">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- * VACANCIES -->
+            <section class="section updates" id="updates">
+                <div class="container">
+                    <h2 class="h2">Вакансії</h2>
+                    <div class="inner">
+
                     </div>
                 </div>
             </section>

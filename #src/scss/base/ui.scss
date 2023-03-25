@@ -1,6 +1,12 @@
 // * <UI CLASSES>==========================================
 
 .section {
+    &:first-of-type {
+        margin-top: calc($header-height + 4rem);
+        @include bp(md) {
+            margin-top: calc($header-height-mobile + 4rem);
+        }
+    }
     &:not(:first-of-type) {
         margin-top: 4rem;
     }
@@ -72,6 +78,19 @@
     @include hover {
         text-decoration: none;
     }
+}
+
+.quote {
+    font-family: "Lyrica Deco", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.06em;
+}
+
+blockquote.quote {
+    @include card-effect;
+    padding: 0.5rem 0.75rem;
+    border-left: 3px solid $inactive-blue;
 }
 
 body .descr:not(:first-of-type) {
