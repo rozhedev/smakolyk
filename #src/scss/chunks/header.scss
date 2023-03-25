@@ -11,8 +11,9 @@
         padding: 0rem 2rem;
         align-items: center;
         justify-content: space-between;
-        min-height: 80px;
+        min-height: $header-height;
         @include bp(md) {
+            min-height: $header-height-mobile;
             padding: 0rem 1.5rem;
         }
     }
