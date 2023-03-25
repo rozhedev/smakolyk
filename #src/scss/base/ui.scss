@@ -1,12 +1,14 @@
 // * <UI CLASSES>==========================================
 
 .section {
-    @include bp(lg) {
+    &:not(:first-of-type) {
+        margin-top: 4rem;
     }
-}
-
-.section-page {
-    @include bp(lg) {
+    .h2 {
+        text-align: center;
+    }
+    .inner {
+        margin-top: 2.5rem;
     }
 }
 
@@ -16,6 +18,10 @@
     line-height: 5rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    @include bp(md) {
+        font-size: 2.3rem;
+        line-height: 3.25rem;
+    }
 }
 
 .h2 {
@@ -24,8 +30,7 @@
     line-height: 3rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
-    @include bp(lg) {
+    @include bp(md) {
         font-size: 1.75rem;
     }
 }
@@ -37,7 +42,7 @@
     line-height: 0.02em;
     text-transform: uppercase;
 
-    @include bp(lg) {
+    @include bp(md) {
         font-size: 1.125rem;
         line-height: 2rem;
     }

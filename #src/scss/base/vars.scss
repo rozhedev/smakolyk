@@ -4,7 +4,7 @@ $font-size: 16px;
 
 // * GRID (MY DEFAULT GRID)
 $max-width: 1920px;
-$grid-gap: 30px !default;
+$grid-gap: 28px !default;
 $grid-gap-side: calc($grid-gap / 2);
 
 $container-max-widths: (
@@ -17,11 +17,11 @@ $container-max-widths: (
 );
 
 $grid-breakpoints: (
-    xs: calc( map-get( $container-max-widths, xs ) + calc( $grid-gap * 6.25 ) ),   // * 536
+    xs: calc( map-get( $container-max-widths, xs ) + calc( $grid-gap * 6.5 ) ),   // * 539
     sm: calc( map-get( $container-max-widths, sm ) + calc( $grid-gap * 6.75 ) ),   // * 728
     md: calc( map-get( $container-max-widths, md ) + calc( $grid-gap * 8.5 ) ),   // * 968
     lg: calc( map-get( $container-max-widths, lg ) + calc( $grid-gap * 5.75 ) ),   // * 1120
-    xl: calc( map-get( $container-max-widths, xl ) + calc( $grid-gap * 9 ) ),      // * 1360  
+    xl: calc( map-get( $container-max-widths, xl ) + calc( $grid-gap * 10 ) ),      // * 1372  
 );
 
 // * COLORS

@@ -6,6 +6,12 @@
     }
 }
 
+@mixin card-effect {
+    background-color: $light-color;
+    border: 1px solid $dark-gray-color;
+    box-shadow: $card-inset-shadow;
+}
+
 @mixin centering {
     display: flex;
     justify-content: center;

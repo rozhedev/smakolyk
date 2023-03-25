@@ -11,6 +11,9 @@
 .swiper-button-prev::after {
     color: $primary-accent-color;
     font-size: 3.5rem;
+    @include bp(md) {
+        display: none;
+    }
 }
 .swiper-button-next::after {
     margin-right: 1.5rem;
@@ -32,13 +35,13 @@
 // * PROMO
 
 .promo-slider {
-    margin-top: calc($header-height / 2);
+    margin-top: $header-height;
     width: 100%;
     height: 640px;
     @include bp(md) {
-        margin-top: calc($header-height-mobile / 2);
+        margin-top: $header-height-mobile;
     }
-    &__item {
+    &-item {
         position: relative;
         &:nth-child(2n + 1) .h1,
         &:nth-of-type(2n + 1) .h2 {
@@ -48,17 +51,41 @@
         &:nth-of-type(2n) .h2 {
             color: $text-light-color;
         }
-    }
-    &__item-content {
-        position: absolute;
-        margin: 10rem auto 0;
-        width: 100%;
-        padding: 0rem 5rem;
-        text-align: center;
+        &__content {
+            position: absolute;
+            margin: 10rem auto 0;
+            width: 100%;
+            padding: 0rem 5rem;
+            text-align: center;
+            @include bp(md) {
+                padding: 0rem 1rem;
+            }
+        }
+        &__img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 2 / 1;
+            @include bp(xl) {
+                aspect-ratio: 5 / 3;
+            }
+            @include bp(lg) {
+                aspect-ratio: 4 / 3;
+            }
+            @include bp(md) {
+                aspect-ratio: 1 / 1;
+            }
+            @include bp(sm) {
+                aspect-ratio: 1 / 2;
+            }
+        }
     }
     .h2 {
         font-size: 1.75rem;
         letter-spacing: 0.02em;
         line-height: 2.5rem;
+        @include bp(md) {
+            font-size: 1.125rem;
+            line-height: 2.75rem;
+        }
     }
 }
