@@ -1,7 +1,4 @@
 .promo {
-    // * For prevent margin from standart layout in ui.scss
-    margin-top: 0 !important;
-
     @include bp(xl) {
         min-height: 50vh;
     }
@@ -28,7 +25,7 @@
         }
         @include bp(sm) {
             grid-template: repeat(8, 1fr) / 1fr;
-            grid-auto-flow: 1fr / repeat(8, 1fr);
+            grid-auto-flow: 1fr / 1fr;
         }
     }
 }

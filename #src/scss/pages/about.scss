@@ -1,15 +1,63 @@
 .about-info {
     .inner {
         display: flex;
+        @include bp(md) {
+            flex-direction: column;
+        }
     }
     &__img {
+        $padding-x: 1.25rem;
         @include card-effect;
+
         margin-left: $grid-gap;
-        padding: 1.5rem 1.25rem;
+        padding: 1.5rem $padding-x;
         border-width: 2px;
         border-color: $primary-accent-color;
-        img {
-            aspect-ratio: 2 / 1;
+        @include bp(md) {
+            margin-left: 0;
+            margin-top: $grid-gap;
+            padding: 1rem;
+        }
+        @include bp(xs) {
+            padding: 0.5rem;
+        }
+
+        .img-wrapper {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 50%;
+
+            width: calc(map-get($container-max-widths, xl) / 2 + $padding-x * 2);
+            @include bp(xl) {
+                width: calc(map-get($container-max-widths, lg) / 2);                
+            }
+            @include bp(lg) {
+                width: calc(map-get($container-max-widths, md) / 2);                
+            }
+            @include bp(md) {
+                width: 100%;                
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: inherit;
+    
+                aspect-ratio: 2 / 1;
+                @include bp(xl) {
+                    aspect-ratio: 2.75 / 2;
+                }
+                @include bp(lg) {
+                    aspect-ratio: 1 / 1;
+                }
+                @include bp(md) {
+                    aspect-ratio: 2 / 1;
+                }
+                @include bp(xs) {
+                    aspect-ratio: 1.9 / 1;
+                }
+            }
         }
     }
     &__content {
@@ -17,19 +65,23 @@
             margin-top: 1rem;
         }
     }
+}
 
-    // * 1024
+.vacancy {
+    .inner {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        grid-auto-flow: 1fr / repeat(3, 1fr);
+        grid-gap: $grid-gap;
+        justify-items: center;
 
-    @include bp(lg) {
-    }
-
-    // * 768
-
-    @include bp(md) {
-    }
-
-    // * 420
-
-    @include bp(sm) {
+        @include bp(xl) {
+            grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+            grid-auto-flow: 1fr / repeat(2, 1fr);
+        }
+        @include bp(sm) {
+            grid-template: repeat(6, 1fr) / 1fr;
+            grid-auto-flow: 1fr / 1fr;
+        }
     }
 }

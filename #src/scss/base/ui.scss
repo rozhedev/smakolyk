@@ -1,12 +1,16 @@
 // * <UI CLASSES>==========================================
 
-.section {
-    &:first-of-type {
-        margin-top: calc($header-height + 4rem);
-        @include bp(md) {
-            margin-top: calc($header-height-mobile + 4rem);
-        }
+.page {
+    margin-top: calc($header-height + 4rem);
+    @include bp(md) {
+        margin-top: calc($header-height-mobile + 4rem);
     }
+}
+main.page {
+    margin-top: 0;
+}
+
+.section {
     &:not(:first-of-type) {
         margin-top: 4rem;
     }
@@ -74,6 +78,7 @@
     display: inline-block;
     color: $secondary-accent-color;
     text-decoration: underline;
+    cursor: pointer;
 
     @include hover {
         text-decoration: none;
@@ -81,7 +86,7 @@
 }
 
 .quote {
-    font-family: "Lyrica Deco", sans-serif;
+    font-family: 'Lyrica Deco', sans-serif;
     font-size: 1.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.06em;
@@ -108,4 +113,40 @@ body .descr:not(:first-of-type) {
 
 .label {
     font-weight: 600;
+}
+
+// * UN- ORDERED LISTS
+
+.ordered-list {
+    counter-reset: myCounter;
+
+    li {
+        list-style: none;
+        line-height: 1.6;
+
+        &::before {
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            color: #9A0014;
+            display: inline;
+            font-weight: 600;
+            margin: 0 0.66rem 0 0;
+        }
+    }
+}
+
+.unordered-list {
+    li {
+        line-height: 1.6;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 999px;
+            background-color: #9A0014;
+            margin: 0px 0.5rem 0px 0.5rem;
+        }
+    }
 }
