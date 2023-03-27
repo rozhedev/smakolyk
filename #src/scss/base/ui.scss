@@ -74,6 +74,18 @@ main.page {
     }
 }
 
+.aside-link {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2.33rem;
+    color: $dark-color;
+    transition: $transition;
+    @include hover {
+        color: $secondary-accent-color;
+        text-decoration: underline;
+    }
+}
+
 .link {
     display: inline-block;
     color: $secondary-accent-color;
@@ -82,6 +94,27 @@ main.page {
 
     @include hover {
         text-decoration: none;
+    }
+}
+
+.details {
+    .summary {
+        display: flex;
+        align-items: center;
+        /* Добавляем собственный маркер для закрытого состояния */
+        &::after {
+            content: "";
+            display: inline-block;
+            background: url('../img/icons/arrow-right.svg') center / cover no-repeat;
+            height: 2rem;
+            width: 2rem;
+            margin-left: 7px;
+            transform: rotate(90deg);
+        }
+    }
+    /* Добавляем собственный маркер для открытого состояния */
+    &[open] .summary::after {
+        transform: rotate(270deg);
     }
 }
 
@@ -127,7 +160,7 @@ body .descr:not(:first-of-type) {
         &::before {
             counter-increment: myCounter;
             content: counter(myCounter);
-            color: #9A0014;
+            color: #9a0014;
             display: inline;
             font-weight: 600;
             margin: 0 0.66rem 0 0;
@@ -140,12 +173,12 @@ body .descr:not(:first-of-type) {
         line-height: 1.6;
 
         &::before {
-            content: "";
+            content: '';
             display: inline-block;
             width: 0.4rem;
             height: 0.4rem;
             border-radius: 999px;
-            background-color: #9A0014;
+            background-color: #9a0014;
             margin: 0px 0.5rem 0px 0.5rem;
         }
     }

@@ -1,0 +1,39 @@
+.book-page {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .book-nav {
+        width: calc((map-get($container-max-widths, xxl) / 12) * 4);
+        summary.aside-link {
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 2.25rem;
+
+            &:hover {
+                color: initial;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+    .book-content {
+        margin-left: $grid-gap;
+        width: calc((map-get($container-max-widths, xxl) / 12) * 8 - $grid-gap);
+        &__subtitle {
+            @include hover {
+                color: $dark-color;
+                text-decoration: none;
+            }
+            @include bp(md) {
+                font-size: 1.25rem;
+            }
+        }
+        &__footer {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
