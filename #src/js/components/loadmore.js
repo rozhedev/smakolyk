@@ -1,20 +1,20 @@
 import { TEXT_CONTENT, CLASS_LIST, STATE_LIST } from '../values';
 
 const vacancyCards = document.querySelectorAll(`.${CLASS_LIST.vacancyCard}`);
-let initialValue = 3;
-let currentItems = 3;
+let initialCount = 3;
+let loadCount = 3;
 
 if (vacancyCards) {
     vacancyCards.forEach((item) => {
         // * Show or hide all list items after page load
 
-        currentItems = initialValue;
+        loadCount = initialCount;
         let itemsList = item.querySelectorAll(`.${CLASS_LIST.vacancyCardListItem}`);
 
-        for (let i = 0; i < currentItems; i++) {
+        for (let i = 0; i < loadCount; i++) {
             itemsList[i].classList.add(STATE_LIST.show);
         }
-        for (let i = currentItems; currentItems++ < itemsList.length; i++) {
+        for (let i = loadCount; loadCount++ < itemsList.length; i++) {
             itemsList[i].classList.add(STATE_LIST.hide);
         }
 
@@ -42,12 +42,12 @@ if (vacancyCards) {
 
                         } else loadmoreItem.textContent = TEXT_CONTENT.btnHide;
                     }
-                    currentItems += loadItemsCount;
+                    loadCount += loadItemsCount;
 
                 } else {
                     // * Hide items when click
-                    currentItems = initialValue;
-                    for (let j = showItemsList.length - 1; j >= currentItems; j--) {
+                    loadCount = initialCount;
+                    for (let j = showItemsList.length - 1; j >= loadCount; j--) {
                         itemsList[j].classList.add(STATE_LIST.hide);
                         itemsList[j].classList.remove(STATE_LIST.show);
                         loadmoreItem.textContent = TEXT_CONTENT.btnShow;
