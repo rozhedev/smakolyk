@@ -50,8 +50,8 @@
         align-items: center;
         justify-content: center;
         width: calc(100% - 1.5rem * 2);
+        transition: $transition;
         svg {
-            transition: $transition;
             stroke: none;
         }
     }
@@ -59,11 +59,26 @@
         .btn__icons {
             position: static;
             margin-left: 0.75rem;
-            transition: $transition;
         }
         @include hover {
             .btn__icons {
                 transform: rotate(-45deg);
+            }
+        }
+    }
+    &--discuss {
+        flex-direction: row-reverse;
+        padding: 0.2rem 0.75rem 0.2rem 0.2rem;
+        span {
+            font-size: 1rem;
+            letter-spacing: normal;
+        }
+        .btn__icons {
+            margin-left: 0;
+        }
+        @include hover {
+            .btn__icons {
+                transform: none;
             }
         }
     }

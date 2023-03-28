@@ -1,0 +1,26 @@
+.news-card {
+    @include card-effect;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+
+    .h3 {
+        text-indent: 1.5rem;
+        @include bp(sm) {
+            text-indent: 0;
+        }
+    }
+    .descr:first-of-type {
+        margin-top: 0.75rem;
+    }
+    &__footer {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .loadmore {
+        display: inline-block;
+        margin-top: 0.75rem;
+    }
+}

@@ -53,6 +53,7 @@ confirm dialog, press "Y". This step need for allow executing local scripts in P
 4. **npm rebuild** - if not all packages are installed after **npm i** command.
 5. **npm cache verify** - If after restarting, build doesn't catch changes "on the fly".
 6. Filename for .js extension files don't contain reserved words such as **data**, **const** etc.
+7. Properties of json files **must not be the same** as the html tag names.
 
 ### Folder structure
 

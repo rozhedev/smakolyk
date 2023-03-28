@@ -80,10 +80,17 @@ main.page {
     line-height: 2.33rem;
     color: $dark-color;
     transition: $transition;
+    cursor: pointer;
     @include hover {
         color: $secondary-accent-color;
         text-decoration: underline;
     }
+}
+
+.date-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $dark-gray-color;
 }
 
 .link {

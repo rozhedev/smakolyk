@@ -21,7 +21,6 @@
             &:hover {
                 color: initial;
                 text-decoration: none;
-                cursor: pointer;
             }
         }
     }
@@ -69,6 +68,20 @@
                 //     margin-left: 0;
                 //     margin-top: $grid-gap;
                 // }
+            }
+            @include bp(sm) {
+                form {
+                    flex-grow: 1;
+                    width: 100%;
+                    align-items: start;
+                }
+                form:not(:first-of-type) {
+                    margin-top: calc($grid-gap * 1.25);
+                }
+                .btn {
+                    width: 100%;
+                    justify-content: center;
+                }
             }
         }
     }
