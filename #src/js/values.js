@@ -12,4 +12,7 @@ export const CLASS_LIST = {
     vacancyCard: "vacancy-card",
     vacancyCardListItem: "vacancy-card__list-item",
     loadmoreBtn: "loadmore",
+    pagination: {
+        
+    },
 }

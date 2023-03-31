@@ -1,0 +1,60 @@
+$icon-size: 1.75rem;
+
+.pagination-container {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    @include bp(sm) {
+        .pagination-number:nth-of-type(n + 10) {
+            margin-top: 1rem;
+        }
+    }
+    @include bp(xs) {
+        .pagination-number:nth-of-type(n + 6) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.pagination-number,
+.pagination-button {
+    background-color: transparent;
+    border: 0.125rem solid $primary-accent-color;
+    margin: 0rem 0.5rem;
+    cursor: pointer;
+    height: $icon-size;
+    width: $icon-size;
+    transition: $transition;
+}
+
+.pagination-button {
+    border: none;
+    background-color: $primary-accent-color;
+    svg {
+        stroke: $text-light-color;
+        width: $icon-size;
+        height: $icon-size;
+    }
+    &[aria-label='Previous page'] {
+        transform: rotate(-180deg);
+    }
+    &:disabled {
+        background-color: $dark-gray-color;
+    }
+}
+
+.pagination-number:hover {
+    background: $text-light-color;
+}
+
+.pagination-number.active,
+.pagination-number:hover {
+    color: $text-light-color;
+    background: $primary-accent-color;
+}

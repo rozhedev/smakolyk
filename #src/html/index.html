@@ -19,62 +19,7 @@
                 <div class="container">
                     <div class="swiper promo-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/promo.jpg" alt="promo" class="promo-slider-item__img">
-                            </div>
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/slide3.png" alt="slide3" class="promo-slider-item__img">
-                            </div>
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/slide4.png" alt="slide4" class="promo-slider-item__img">
-                            </div>
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/slide2.png" alt="slide2" class="promo-slider-item__img">
-                            </div>
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/slide6.png" alt="slide6" class="promo-slider-item__img">
-                            </div>
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/slide5.png" alt="slide5" class="promo-slider-item__img">
-                            </div>
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/slide7.png" alt="slide7" class="promo-slider-item__img">
-                            </div>
-                            <div class="swiper-slide promo-slider-item">
-                                <div class="promo-slider-item__content">
-                                    <h1 class="h1">Смаколики</h1>
-                                    <span class="h2">Команда перекладачів</span>
-                                </div>
-                                <img src="img/photos/promo-slider/slide8.png" alt="slide8" class="promo-slider-item__img">
-                            </div>
+                            @@loop("components/_promo-slider-item.html", "../json/promo-slider-items.json")
                         </div>
                         <div class="swiper-pagination"></div>
 
@@ -92,7 +37,7 @@
                         @@loop("components/_update-item.html", "../json/update-items.json")
                     </div>
                     <form action="#">
-                        <button type="submit" class="btn view-all">
+                        <button type="submit" class="btn view-all-btn">
                             <span class="btn__text">Переглянути всі</span>
                             <div class="btn__icons">
                                 <svg width="64" height="32" viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">

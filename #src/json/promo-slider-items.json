@@ -1,0 +1,44 @@
+[
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/promo.jpg",
+        "imgAlt": "promo"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide3.png",
+        "imgAlt": "slide3"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide4.png",
+        "imgAlt": "slide4"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide2.png",
+        "imgAlt": "slide2"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide5.png",
+        "imgAlt": "slide5"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide7.png",
+        "imgAlt": "slide7"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide8.png",
+        "imgAlt": "slide8"
+    }
+]
