@@ -1,7 +1,8 @@
-const pagNumbers = document.getElementById("pagination-numbers");
-const nextButton = document.getElementById("next-button");
-const prevButton = document.getElementById("prev-button");
-const pagNumbersList = document.querySelectorAll(".pagination-number");
+import {STATE_LIST, ID_LIST, CLASS_LIST} from "../values";
+
+const paginationNumbers = document.getElementById(ID_LIST.pagination.numWrapper);
+const nextButton = document.getElementById(ID_LIST.pagination.nextBtn);
+const prevButton = document.getElementById(ID_LIST.pagination.prevButton);
 let listItems = 100;
 
 const paginationLimit = 10;
@@ -9,10 +10,12 @@ const pageCount = Math.ceil(listItems / paginationLimit);
 let currentPage = 1;
 
 const disableButton = (button) => {
+    button.classList.add("disabled");
     button.setAttribute("disabled", true);
 };
 
 const enableButton = (button) => {
+    button.classList.remove("disabled");
     button.removeAttribute("disabled");
 };
 
@@ -31,11 +34,11 @@ const handlePageButtonsStatus = () => {
 };
 
 const handleActivePageNumber = () => {
-    pagNumbersList.forEach((button) => {
-        button.classList.remove("active");
+    document.querySelectorAll(`.${CLASS_LIST.pagination.numList}`).forEach((button) => {
+        button.classList.remove(STATE_LIST.active);
         const pageIndex = Number(button.getAttribute("page-index"));
         if (pageIndex == currentPage) {
-            button.classList.add("active");
+            button.classList.add(STATE_LIST.active);
         }
     });
 };
@@ -44,10 +47,10 @@ const appendPageNumber = (index) => {
     const pageNumber = document.createElement("button");
     pageNumber.className = "pagination-number";
     pageNumber.innerHTML = index;
-    
     pageNumber.setAttribute("page-index", index);
     pageNumber.setAttribute("aria-label", "Page " + index);
-    pagNumbers.appendChild(pageNumber);
+
+    paginationNumbers.appendChild(pageNumber);
 };
 
 const getPaginationNumbers = () => {
@@ -75,7 +78,7 @@ window.addEventListener("load", () => {
         setCurrentPage(currentPage + 1);
     });
 
-    pagNumbersList.forEach((button) => {
+    document.querySelectorAll(`.${CLASS_LIST.pagination.numList}`).forEach((button) => {
         const pageIndex = Number(button.getAttribute("page-index"));
 
         if (pageIndex) {

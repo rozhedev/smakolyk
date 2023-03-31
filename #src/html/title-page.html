@@ -2,7 +2,7 @@
 <html lang="ua">
 
 @@include('chunks/_head.html',{
-"title":"Про нас"
+"title":"Про книгу Асаґірі Кафки «Буревісник»"
 })
 
 <body>
@@ -13,23 +13,90 @@
         @@include('chunks/_header.html',{})
 
         <div class="page" id="title-page">
-            <!-- * ABOUT INFO -->
+            <!-- * BOOK INFO -->
 
             <section class="section title-page" id="title-page-content">
                 <div class="container">
                     <div class="inner">
-                        
+                        <img src="img/photos/covers/burevisnyk.jpg" alt="burevisnyk" class="title-page__img">
+                        <div class="title-page__content">
+                            <h4 class="h4">«Буревісник» з серії «Бродячі пси літератури»</h4>
+                            <div class="title-page__article">
+                                <div class="title-page__article-descr">
+                                    <!-- * NOT MORE 5 PARAGRAPH -->
+                                    <p class="descr truncate">
+                                        У цьому світі, де Мисливці з різноманітними магічними здібностями борються з монстрами, щоб захистити простих людей від знищення, Сон Джин-У був найслабшим з них.
+                                    </p>
+                                    <p class="descr truncate">
+                                        Однак таємнича система надає йому силу «Гравця», і спрямовує його на небезпечний шлях.
+                                    </p>
+                                    <p class="descr truncate">
+                                        Слідкуйте за тим, як Сон Джин-У вирушає в пригоду, щоб стати найсильнішим завдяки своїй системі «Підняття рівня» — єдиній у всьому світі!
+                                    </p>
+                                    <p class="descr truncate">
+                                        Слідкуйте за тим, як Сон Джин-У вирушає в пригоду, щоб стати найсильнішим завдяки своїй системі «Підняття рівня» — єдиній у всьому світі!
+                                    </p>
+                                </div>
+                                <div class="title-page__article-info">
+                                    <p class="title-page-item">
+                                        Автор: <span>Асаґірі Кафка</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Інші назви: <span>
+                                            나 혼자만 레벨업; Na Honjaman; Lebel-eob; Solo Leveling;
+                                            Only I Level Up; Only I Level Up; Only I Level Up; Only I Level Up;
+                                        </span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Країна походження: <span>Корея</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Рік випуску: <span>1988</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Кількість розділів: <span>145</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Стан написання: <span>завершено</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Стан перекладу: <span>триває</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Прогрес: <span>39/145</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Переклад: <span>AxelCold</span>
+                                    </p>
+                                    <p class="title-page-item">
+                                        Додатковий пункт: <span>деяке значення</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="title-page__tags">
+                                <p class="title-page-item">
+                                    Жанри: <span>
+                                        #бойовик #фентезі #пригоди #драма #шьонен #бойовик #фентезі #пригоди #драма #шьонен #бойовик #фентезі #пригоди #драма #шьонен
+                                    </span>
+                                </p>
+                                <p class="title-page-item">
+                                    Теги: <span> #магія #артефакти #боги #демони #монстри #дракони #еволюція #система #розумний_гг #корея #гг_чоловік
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- * VACANCIES -->
-            <section class="section vacancy" id="title-page-nav">
+            <!-- * BOOK NAV -->
+            <section class="section" id="title-page-nav">
                 <div class="container">
                     <h2 class="h2">Навігація</h2>
-                    <div class="inner">
 
-                    </div>
+                    @@include("chunks/_book-aside.html", {
+                    "title": "Навігація по тому",
+                    })
                 </div>
             </section>
         </div>

@@ -7,7 +7,7 @@ const promoSlider = new Swiper('.promo-slider', {
     autoplay: {
         delay: 5000,
     },
-    // pauseOnMouseEnter: true,
+    pauseOnMouseEnter: true,
 
     // If we need pagination
     pagination: {

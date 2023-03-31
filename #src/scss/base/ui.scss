@@ -58,6 +58,15 @@ main.page {
     }
 }
 
+.h4 {
+    font-family: 'Traditional', 'Garamond', 'Georgia', serif;
+    font-size: 1.125rem;
+    line-height: 2rem; 
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+
 .navlink {
     display: inline-block;
     font-size: 1.25rem;
@@ -110,7 +119,7 @@ main.page {
         align-items: center;
         /* Добавляем собственный маркер для закрытого состояния */
         &::after {
-            content: "";
+            content: '';
             display: inline-block;
             background: url('../img/icons/arrow-right.svg') center / cover no-repeat;
             height: 2rem;
@@ -118,6 +127,10 @@ main.page {
             margin-left: 7px;
             transform: rotate(90deg);
         }
+    }
+    summary.aside-link:hover {
+        color: initial;
+        text-decoration: none;
     }
     /* Добавляем собственный маркер для открытого состояния */
     &[open] .summary::after {
@@ -189,4 +202,12 @@ body .descr:not(:first-of-type) {
             margin: 0px 0.5rem 0px 0.5rem;
         }
     }
+}
+
+.truncate {
+    margin: 0;
+    -webkit-line-clamp: 14;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

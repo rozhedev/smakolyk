@@ -4,7 +4,7 @@ $icon-size: 1.75rem;
     margin-top: 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .pagination-numbers {
@@ -49,11 +49,7 @@ $icon-size: 1.75rem;
     }
 }
 
-.pagination-number:hover {
-    background: $text-light-color;
-}
-
-.pagination-number.active,
+.pagination-number._active,
 .pagination-number:hover {
     color: $text-light-color;
     background: $primary-accent-color;

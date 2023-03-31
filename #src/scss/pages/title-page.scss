@@ -1,0 +1,96 @@
+.title-page {
+    .inner {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include bp(md) {
+            flex-direction: column;
+        }
+        picture,
+        .title-page__img {
+            // * Adapptive layout
+            width: clamp(
+                (map-get($container-max-widths, xxl) / 12) * 4 - $grid-gap,
+                33%,
+                map-get($container-max-widths, xs)
+            );
+            @include bp(xl) {
+                max-width: calc(map-get($container-max-widths, xl) / 12) * 4 - $grid-gap;
+            }
+            @include bp(lg) {
+                max-width: calc(map-get($container-max-widths, lg) / 12) * 4 - $grid-gap;
+            }
+            @include bp(md) {
+                margin: 0 auto;
+                width: clamp(map-get($container-max-widths, xs), 100%, map-get($container-max-widths, md));
+            }
+        }
+    }
+    &__img {
+        border: 0.1875rem solid $light-gray-color;
+    }
+    &__content {
+        @include card-effect;
+        width: clamp((map-get($container-max-widths, xxl) / 12) * 8, 66%, map-get($container-max-widths, xs));
+        padding: 1rem;
+        border: 0.1875rem solid $light-gray-color;
+
+        @include bp(xl) {
+            max-width: calc(map-get($container-max-widths, xl) / 12) * 8;
+        }
+        @include bp(lg) {
+            max-width: calc(map-get($container-max-widths, lg) / 12) * 8;
+        }
+        @include bp(md) {
+            margin-top: $grid-gap;
+            max-width: 100%;
+            .h4 {
+                text-align: justify;
+            }
+        }
+    }
+    &__article {
+        margin-top: 1rem;
+        display: flex;
+        text-align: justify;
+
+        @include bp(xl) {
+            flex-direction: column;
+        }
+        &-info,
+        &-descr {
+            width: 50%;
+            @include bp(xl) {
+                width: 100%;
+            }
+        }
+        &-info {
+            padding-left: $grid-gap;
+            @include bp(xl) {
+                padding-left: 0;
+            }
+        }
+        // * SELECTOR SPECIFITY
+        .truncate:nth-of-type(n) {
+            margin-top: 0rem;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.title-page-item {
+    text-indent: 0;
+    margin-top: 0.33rem;
+    span {
+        font-weight: 600;
+    }
+}
+
+.title-page__tags {
+    .title-page-item {
+        margin-top: 0.4rem;
+    }
+}
