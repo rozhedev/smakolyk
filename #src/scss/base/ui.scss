@@ -217,7 +217,9 @@ body .descr:not(:first-of-type) {
 .vacancy-card__list-item, .book-nav-item {
     transition: $transition;
     &._hide {
-        padding: 0 0.75rem;
+        &:nth-of-type(n) {
+            padding: 0 0.75rem;
+        }
         opacity: 0;
         height: 0;
         pointer-events: none;
