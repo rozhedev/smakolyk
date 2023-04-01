@@ -5,13 +5,14 @@ export const STATE_LIST = {
 }
 
 export const TEXT_CONTENT = {
-    btnShow: "Показати більше...",
-    btnHide: "Згорнути",
+    btnShow: "Показати більше &#9660;",
+    btnHide: "Згорнути &#9650;",
 }
 
 export const CLASS_LIST = {
     vacancyCard: "vacancy-card",
     vacancyCardListItem: "vacancy-card__list-item",
+    bookNavItem: "book-nav-item",
     loadmoreBtn: "loadmore",
     pagination: {
         numList: "pagination-number",

@@ -6,7 +6,7 @@
             flex-direction: column-reverse;
         }
     }
-    .book-nav {
+    .aside-nav {
         width: clamp((map-get($container-max-widths, xxl) / 12) * 4, 33%, map-get($container-max-widths, xs));
         @include bp(md) {
             width: clamp(map-get($container-max-widths, xs), 100%, map-get($container-max-widths, md));

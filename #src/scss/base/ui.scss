@@ -211,3 +211,20 @@ body .descr:not(:first-of-type) {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+// * SERVICE CLASSES FOR LOAD ITEMS
+
+.vacancy-card__list-item, .book-nav-item {
+    transition: $transition;
+    &._hide {
+        padding: 0 0.75rem;
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
+    }
+    &._show {
+        opacity: 1;
+        pointer-events: all;
+        height: auto;
+    }
+}

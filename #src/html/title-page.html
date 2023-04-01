@@ -90,13 +90,54 @@
             </section>
 
             <!-- * BOOK NAV -->
-            <section class="section" id="title-page-nav">
+            <section class="section book-nav" id="title-page-nav">
                 <div class="container">
                     <h2 class="h2">Навігація</h2>
-
-                    @@include("chunks/_book-aside.html", {
-                    "title": "Навігація по тому",
-                    })
+                    <details class="details" open>
+                        <summary class="summary aside-link">Назва тому 1</summary> 
+                        <nav class="book-nav__inner">
+                            <ul class="book-nav__list">
+                                @@loop("components/_book-nav-item.html", "../json/book-nav-item.json")
+                            </ul>
+                            <button type="button" class="link loadmore">Показати більше... &#9660;</button>
+                        </nav>
+                    </details>
+                    <details class="details">
+                        <summary class="summary aside-link">Назва тому 2</summary> 
+                        <nav class="book-nav__inner">
+                            <ul class="book-nav__list">
+                                @@loop("components/_book-nav-item.html", "../json/book-nav-item.json")
+                            </ul>
+                            <button type="button" class="link loadmore">Показати більше... &#9660;</button>
+                        </nav>
+                    </details>
+                    <details class="details">
+                        <summary class="summary aside-link">Назва тому 3</summary> 
+                        <nav class="book-nav__inner">
+                            <ul class="book-nav__list">
+                                @@loop("components/_book-nav-item.html", "../json/book-nav-item.json")
+                            </ul>
+                            <button type="button" class="link loadmore">Показати більше... &#9660;</button>
+                        </nav>
+                    </details>
+                    <details class="details">
+                        <summary class="summary aside-link">Назва тому 4</summary> 
+                        <nav class="book-nav__inner">
+                            <ul class="book-nav__list">
+                                @@loop("components/_book-nav-item.html", "../json/book-nav-item.json")
+                            </ul>
+                            <button type="button" class="link loadmore">Показати більше... &#9660;</button>
+                        </nav>
+                    </details>
+                    <details class="details">
+                        <summary class="summary aside-link">Назва тому 5</summary> 
+                        <nav class="book-nav__inner">
+                            <ul class="book-nav__list">
+                                @@loop("components/_book-nav-item.html", "../json/book-nav-item.json")
+                            </ul>
+                            <button type="button" class="link loadmore">Показати більше... &#9660;</button>
+                        </nav>
+                    </details>
                 </div>
             </section>
         </div>
