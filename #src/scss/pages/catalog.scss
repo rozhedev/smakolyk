@@ -1,0 +1,122 @@
+.catalog-filters {
+    .inner {
+        display: flex;
+        align-items: flex-start;
+
+        // * FILTER HEADER
+        @include bp(sm) {
+            flex-direction: column-reverse;
+            align-items: stretch;
+            .btn {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2rem;
+                &__icons {
+                    width: auto;
+                }
+            }
+        }
+        .summary::after {
+            content: '';
+            display: none;
+        }
+        .btn--little:hover {
+            .btn__icons {
+                transform: none;
+            }
+        }
+        .filter__body {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .search-form {
+            display: flex;
+            margin-left: 2rem;
+            @include bp(md) {
+                margin-left: 1rem;
+            }
+            @include bp(sm) {
+                margin-left: 0rem;
+                flex-direction: column;
+            }
+            .inp {
+                width: calc(map-get($container-max-widths, xxl) / 12) * 8.55;
+                @include bp(xl) {
+                    width: calc(map-get($container-max-widths, xl) / 12) * 7.8;
+                }
+                @include bp(lg) {
+                    width: calc(map-get($container-max-widths, lg) / 12) * 7.2;
+                }
+                @include bp(md) {
+                    width: calc(map-get($container-max-widths, md) / 12) * 6;
+                }
+                @include bp(sm) {
+                    width: 100%;
+                }
+            }
+            .btn {
+                margin-left: 1rem;
+                @include bp(md) {
+                    margin-left: 0.66rem;
+                }
+                @include bp(sm) {
+                    margin-left: 0rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        // * FILTER BODY
+
+        .filter__body {
+            @include card-effect;
+            position: absolute;
+            display: flex;
+            width: map-get($container-max-widths, xxl);
+            padding: 1.25rem 1rem;
+
+            & > div{
+                // min-width: 200px;
+                &:not(:first-of-type) {
+                    margin-left: 2rem;
+                }
+            }
+            .text-subtitle {
+                text-indent: 0;
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+            .form-conroller {
+               &:first-of-type {
+                margin-top: 0.66rem;
+               }
+                small {
+                    display: none;
+                }
+                &._error {
+                    small {
+                        display: block;
+                    }
+                }
+            }
+            .checkbox-group {
+                column-count: 3;
+                & >.checkbox:not(:first-of-type) {
+                    margin-top: 0.5rem;
+                }
+            }
+            .radio:not(:first-of-type) {
+                margin-top: 0.5rem;
+            }
+            .select {
+                min-width: 15rem;
+                &:not(:first-of-type) {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

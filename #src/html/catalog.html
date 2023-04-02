@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+@@include('chunks/_head.html',{
+"title":"Читальня"
+})
+
+<body>
+    @@include('chunks/_preloader.html',{})
+
+    <div class="wrapper">
+        <!-- * HEADER -->
+        @@include('chunks/_header.html',{})
+
+        <div class=" page" id="catalog">
+            <!-- * FILTERS -->
+
+            <section class="section catalog-filters" id="catalog-filters">
+                <div class="container">
+                    <h2 class="h2">Читальня</h2>
+                    <div class="inner">
+                        <details class="details filter" open>
+                            <summary class="summary filter__btn">
+                                <div type="button" class="btn btn--little">
+                                    <span>Фільтри</span>
+                                    <div class="btn__icons">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 3V21" stroke="white" stroke-width="1.5" stroke-miterlimit="5" />
+                                            <path d="M18 3V21" stroke="white" stroke-width="1.5" stroke-miterlimit="5" />
+                                            <path d="M12 3V21" stroke="white" stroke-width="1.5" stroke-miterlimit="5" />
+                                            <path d="M3 18H9" stroke="white" stroke-width="1.5" stroke-miterlimit="5" />
+                                            <path d="M9 7.5H15" stroke="white" stroke-width="1.5" stroke-miterlimit="5" />
+                                            <path d="M15 15H21" stroke="white" stroke-width="1.5" stroke-miterlimit="5" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </summary>
+                            <form class="filter__body">
+                                <div>
+                                    <h5 class="text-subtitle">Жанр твору:</h5>
+                                    <div class="form-conroller checkbox-group">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox1">
+                                            <label for="checkbox1" class="checkbox__label label">Новели</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox2">
+                                            <label for="checkbox2" class="checkbox__label label">П’єси</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox3">
+                                            <label for="checkbox3" class="checkbox__label label">Ранобе</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox4">
+                                            <label for="checkbox4" class="checkbox__label label">Романи</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox5">
+                                            <label for="checkbox5" class="checkbox__label label">Повісті</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox6">
+                                            <label for="checkbox6" class="checkbox__label label">Балади</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-subtitle">Етап перекладу:</h5>
+                                    <div class="form-conroller radio-group">
+                                        <div class="form-conroller radio">
+                                            <input type="radio" name="gender-radio-btn" id="radio-btn-male" class="radio__input">
+                                            <label for="radio-btn-male" class="radio__label label">Завершені</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="form-conroller radio">
+                                            <input type="radio" name="gender-radio-btn" id="radio-btn-female" class="radio__input">
+                                            <label for="radio-btn-female" class="radio__label label">Незавершені</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-subtitle">Жанр твору:</h5>
+                                    <div class="form-conroller checkbox-group">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox1">
+                                            <label for="checkbox1" class="checkbox__label label">Новели</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox2">
+                                            <label for="checkbox2" class="checkbox__label label">П’єси</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox3">
+                                            <label for="checkbox3" class="checkbox__label label">Ранобе</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox4">
+                                            <label for="checkbox4" class="checkbox__label label">Романи</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox5">
+                                            <label for="checkbox5" class="checkbox__label label">Повісті</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="filter-checkbox" class="checkbox__input form-conroller__checkbox"
+                                                id="checkbox6">
+                                            <label for="checkbox6" class="checkbox__label label">Балади</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-subtitle">Етап перекладу:</h5>
+                                    <div class="form-conroller radio-group">
+                                        <div class="form-conroller radio">
+                                            <input type="radio" name="gender-radio-btn" id="radio-btn-male" class="radio__input">
+                                            <label for="radio-btn-male" class="radio__label label">Завершені</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                        <div class="form-conroller radio">
+                                            <input type="radio" name="gender-radio-btn" id="radio-btn-female" class="radio__input">
+                                            <label for="radio-btn-female" class="radio__label label">Незавершені</label>
+                                            <small class="form-conroller__message">Error message</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form-controller select">
+                                        <select name="select" id="some-select" title="select">
+                                            <option value="val1" selected disabled>Сортувати за</option>
+                                            <option value="val2">Значение 2</option>
+                                            <option value="val3">Значение 3</option>
+                                            <option value="val4">Значение 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-controller select">
+                                        <select name="select" id="some-select" title="select">
+                                            <option value="val1" selected disabled>Сортувати за</option>
+                                            <option value="val2">Значение 2</option>
+                                            <option value="val3">Значение 3</option>
+                                            <option value="val4">Значение 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </details>
+                        <form action="#" class="search-form">
+                            <input type="text" name="book-name" id="book-name" class="search-for__inp inp" placeholder="Назва книги...">
+                            <button class="btn btn--little">
+                                <span>Пошук</span>
+                                <div class="btn__icons">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.5 18C9.35786 18 6 14.6421 6 10.5C6 6.35786 9.35786 3 13.5 3C17.6421 3 21 6.35786 21 10.5C21 14.6421 17.6421 18 13.5 18Z" stroke="#FFF6F4" stroke-width="1.5" stroke-miterlimit="5" />
+                                        <path d="M3.00001 21L8.19751 15.8025" stroke="#FFF6F4" stroke-width="1.5" stroke-miterlimit="5" />
+                                    </svg>
+
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- * CARDS -->
+            <section class="section catalog-cards" id="catalog-cards">
+                <div class="container">
+                    <div class="inner">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- * FOOTER -->
+        @@include('chunks/_footer.html',{})
+    </div>
+
+    <!-- * POPUP -->
+    <!-- @@include('chunks/_popup.html',{}) -->
+    <!-- * JS -->
+    @@include('chunks/_js.html',{})
+</body>
+
+</html>
