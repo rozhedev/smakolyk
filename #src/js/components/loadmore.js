@@ -6,6 +6,7 @@ let initialCountVacancy = 3;
 let loadCountVacancy = 3;
 let initialCountNav = 8;
 let loadCountNav = 4;
+let smBreakpoint = 736;
 
 function showItems(wrapper, itemListClass, initialCount, loadCount) {
     let tempCount = loadCount;
@@ -67,6 +68,6 @@ if (vacancyCards) {
     showItems(vacancyCards, CLASS_LIST.vacancyCardListItem, initialCountVacancy, loadCountVacancy);
 }
 
-if (navInners) {
+if (navInners && window.innerWidth < smBreakpoint) {
     showItems(navInners, CLASS_LIST.bookNavItem, initialCountNav, loadCountNav);
 }
