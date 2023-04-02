@@ -20,6 +20,19 @@
         }
         .filter {
             position: relative;
+            .icon-plus {
+                display: none;
+                transform: rotate(45deg);
+            }
+        }
+        .filter[open] .filter__btn .btn {
+            box-shadow: $btn-inset-shadow;
+            .icon-filter {
+                display: none;
+            }
+            .icon-plus {
+                display: block;
+            }
         }
         .summary::after {
             content: '';
@@ -31,6 +44,7 @@
             }
         }
         .filter__body {
+            z-index: 2;
             margin-top: 1.25rem;
             display: flex;
             flex-wrap: nowrap;
@@ -85,9 +99,11 @@
             flex-wrap: wrap;
             width: map-get($container-max-widths, xxl);
             padding: $body-padding-x $body-padding-y;
+            gap: 1rem 2rem;
 
             @include bp(xl) {
                 width: map-get($container-max-widths, xl);
+                gap: 1rem 1.5rem;
             }
             @include bp(lg) {
                 width: map-get($container-max-widths, lg);
@@ -103,53 +119,62 @@
             }
 
             .filter__body-item {
-                // * ADD OR REMOVE MARGIN FOR FILTERS GROUPS
-                $margin-desktop-x: 2rem;
-                $margin-mobile-x: 1.5rem;
-                $margin-y: 1rem;
+                // * ADD OR REMOVE MARGIN FOR FILTERS GROUPS IF GAP NOT SUPPORTED
+                // $margin-desktop-x: 2rem;
+                // $margin-mobile-x: 1.5rem;
+                // $margin-y: 1rem;
 
-                &:not(:first-of-type) {
-                    margin-left: $margin-desktop-x;
-                    @include bp(lg) {
-                        margin-left: $margin-mobile-x;
-                    }
-                }
-                @include bp(xl) {
-                    &:nth-child(5) {
-                        margin-left: 0;
-                        margin-top: $margin-y;
-                    }
-                }
-                @include bp(lg) {
-                    &:nth-child(4) {
-                        margin-left: 0;
-                        margin-top: $margin-y;
-                    }
-                    &:nth-child(5) {
-                        margin-left: $margin-mobile-x;
-                        margin-top: $margin-y;
-                    }
-                }
+                // &:not(:first-of-type, :last-of-type) {
+                //     margin-left: $margin-desktop-x;
+                //     @include bp(lg) {
+                //         margin-left: $margin-mobile-x;
+                //     }
+                // }
+            }
+
+            // * TAGBOX
+
+            .tag-container {
+                margin: 0;
+            }
+            .tagbox {
+                padding: 0.5rem 0 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                border-bottom: 0.0625rem solid $light-gray-color;
+            }
+            .tagbox-added {
+                padding-top: 1.25rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+
                 @include bp(md) {
-                    &:nth-child(3) {
-                        margin-left: 0;
-                        margin-top: $margin-y;
-                    }
-                    &:nth-child(4) {
-                        margin-left: $margin-mobile-x;
-                        margin-top: $margin-y;
-                    }
-                    &:nth-child(5) {
-                        margin-left: 0;
-                    }
+                    padding-top: 0;
+                    flex-direction: column-reverse;
                 }
-                @include bp(xs) {
-                    &:not(:first-of-type) {
+                &__inner {
+                    margin-left: 1.5rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    @include bp(md) {
                         margin-left: 0;
-                        margin-top: $margin-y;
+                        margin-top: 1.33rem;
+                        display: flex;
+                        flex-wrap: wrap;
                     }
                 }
             }
+            .tagbox-added .btn {
+                @include bp(md) {
+                    margin-top: 1.75rem;
+                }
+            }
+
+            //  * FORM CONTROLLERS
             .text-subtitle {
                 text-indent: 0;
                 font-size: 1.125rem;
@@ -187,5 +212,18 @@
                 }
             }
         }
+    }
+}
+
+// * CATALOG CARDS
+
+.catalog-cards {
+    &:nth-of-type(n) {
+        margin-top: 200px;
+    }
+    .inner {
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        gap: $grid-gap;
     }
 }
