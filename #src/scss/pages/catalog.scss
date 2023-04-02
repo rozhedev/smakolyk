@@ -18,6 +18,9 @@
                 }
             }
         }
+        .filter {
+            position: relative;
+        }
         .summary::after {
             content: '';
             display: none;
@@ -45,13 +48,13 @@
             .inp {
                 width: calc(map-get($container-max-widths, xxl) / 12) * 8.55;
                 @include bp(xl) {
-                    width: calc(map-get($container-max-widths, xl) / 12) * 7.8;
+                    width: calc(map-get($container-max-widths, xl) / 12) * 7.9;
                 }
                 @include bp(lg) {
-                    width: calc(map-get($container-max-widths, lg) / 12) * 7.2;
+                    width: calc(map-get($container-max-widths, lg) / 12) * 7.28;
                 }
                 @include bp(md) {
-                    width: calc(map-get($container-max-widths, md) / 12) * 6;
+                    width: calc(map-get($container-max-widths, md) / 12) * 6.05;
                 }
                 @include bp(sm) {
                     width: 100%;
@@ -72,16 +75,79 @@
         // * FILTER BODY
 
         .filter__body {
+            $body-padding-x: 1.25rem;
+            $body-padding-y: 1rem;
+
             @include card-effect;
             position: absolute;
+            left: 0;
             display: flex;
+            flex-wrap: wrap;
             width: map-get($container-max-widths, xxl);
-            padding: 1.25rem 1rem;
+            padding: $body-padding-x $body-padding-y;
 
-            & > div{
-                // min-width: 200px;
+            @include bp(xl) {
+                width: map-get($container-max-widths, xl);
+            }
+            @include bp(lg) {
+                width: map-get($container-max-widths, lg);
+            }
+            @include bp(md) {
+                width: map-get($container-max-widths, md);
+            }
+            @include bp(sm) {
+                width: calc(map-get($container-max-widths, sm) - $grid-gap / 2);
+            }
+            @include bp(xs) {
+                width: calc(map-get($container-max-widths, xs) - $grid-gap / 2);
+            }
+
+            .filter__body-item {
+                // * ADD OR REMOVE MARGIN FOR FILTERS GROUPS
+                $margin-desktop-x: 2rem;
+                $margin-mobile-x: 1.5rem;
+                $margin-y: 1rem;
+
                 &:not(:first-of-type) {
-                    margin-left: 2rem;
+                    margin-left: $margin-desktop-x;
+                    @include bp(lg) {
+                        margin-left: $margin-mobile-x;
+                    }
+                }
+                @include bp(xl) {
+                    &:nth-child(5) {
+                        margin-left: 0;
+                        margin-top: $margin-y;
+                    }
+                }
+                @include bp(lg) {
+                    &:nth-child(4) {
+                        margin-left: 0;
+                        margin-top: $margin-y;
+                    }
+                    &:nth-child(5) {
+                        margin-left: $margin-mobile-x;
+                        margin-top: $margin-y;
+                    }
+                }
+                @include bp(md) {
+                    &:nth-child(3) {
+                        margin-left: 0;
+                        margin-top: $margin-y;
+                    }
+                    &:nth-child(4) {
+                        margin-left: $margin-mobile-x;
+                        margin-top: $margin-y;
+                    }
+                    &:nth-child(5) {
+                        margin-left: 0;
+                    }
+                }
+                @include bp(xs) {
+                    &:not(:first-of-type) {
+                        margin-left: 0;
+                        margin-top: $margin-y;
+                    }
                 }
             }
             .text-subtitle {
@@ -90,9 +156,9 @@
                 font-weight: 500;
             }
             .form-conroller {
-               &:first-of-type {
-                margin-top: 0.66rem;
-               }
+                &:first-of-type {
+                    margin-top: 0.66rem;
+                }
                 small {
                     display: none;
                 }
@@ -104,7 +170,7 @@
             }
             .checkbox-group {
                 column-count: 3;
-                & >.checkbox:not(:first-of-type) {
+                & > .checkbox:not(:first-of-type) {
                     margin-top: 0.5rem;
                 }
             }
@@ -115,6 +181,9 @@
                 min-width: 15rem;
                 &:not(:first-of-type) {
                     margin-top: 1rem;
+                }
+                @include bp(xs) {
+                    width: calc(map-get($container-max-widths, xs) - 2.5rem);
                 }
             }
         }
