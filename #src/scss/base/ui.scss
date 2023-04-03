@@ -81,6 +81,11 @@ main.page {
     @include bp(md) {
         font-size: 2rem;
     }
+    &.active {
+        color: $primary-accent-color;
+        font-weight: 600;
+        text-decoration: underline;
+    }
 }
 
 .aside-link {
