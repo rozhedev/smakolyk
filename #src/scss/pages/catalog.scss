@@ -101,6 +101,8 @@
             padding: $body-padding-x $body-padding-y;
             gap: 1rem 2rem;
             max-height: 50vh;
+            box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 20px rgba(255, 255, 255, 1);
+            border: 0.125rem solid $dark-gray-color;
 
             @include bp(xl) {
                 width: map-get($container-max-widths, xl);
@@ -116,7 +118,7 @@
             }
             @include bp(sm) {
                 width: calc(map-get($container-max-widths, sm) - $grid-gap / 2);
-                max-height: 70vh;
+                max-height: 60vh;
             }
             @include bp(xs) {
                 width: calc(map-get($container-max-widths, xs) - $grid-gap / 5);
@@ -208,11 +210,15 @@
 
 .catalog-cards {
     &:nth-of-type(n) {
-        margin-top: 200px;
+        margin-top: 2.5rem;
     }
     .inner {
         display: grid;
         grid-template: 1fr / repeat(2, 1fr);
+        grid-auto-flow: row dense;
         gap: $grid-gap;
+        @include bp(sm) {
+            grid-template: 1fr / 1fr;
+        }
     }
 }

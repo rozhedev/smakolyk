@@ -1,4 +1,4 @@
-import { TEXT_CONTENT, CLASS_LIST, STATE_LIST } from '../values';
+import { TEXT_CONTENT, CLASS_LIST, STATE_LIST, BP_LIST } from '../values';
 
 const vacancyCards = document.querySelectorAll(`.${CLASS_LIST.vacancyCard}`);
 const navInners = document.querySelectorAll(`.book-nav__inner`);
@@ -6,7 +6,6 @@ let initialCountVacancy = 3;
 let loadCountVacancy = 3;
 let initialCountNav = 8;
 let loadCountNav = 4;
-let smBreakpoint = 736;
 
 function showItems(wrapper, itemListClass, initialCount, loadCount) {
     let tempCount = loadCount;
@@ -68,6 +67,6 @@ if (vacancyCards) {
     showItems(vacancyCards, CLASS_LIST.vacancyCardListItem, initialCountVacancy, loadCountVacancy);
 }
 
-if (navInners && window.innerWidth < smBreakpoint) {
+if (navInners && window.innerWidth < BP_LIST.sm) {
     showItems(navInners, CLASS_LIST.bookNavItem, initialCountNav, loadCountNav);
 }

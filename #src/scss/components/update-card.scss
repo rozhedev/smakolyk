@@ -2,7 +2,7 @@
     @include card-effect;
     padding: 1.33rem;
 
-    .update-item__content {
+    &__content {
         display: flex;
         flex-direction: column;
         margin-top: 1.5rem;
@@ -11,7 +11,7 @@
             margin-top: 0;
         }
     }
-    .update-item__img {
+    &__img {
         width: 16rem;
         aspect-ratio: 3 / 4;
         @include bp(sm) {

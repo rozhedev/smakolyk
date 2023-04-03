@@ -72,7 +72,8 @@
             }
         }
         // * SELECTOR SPECIFITY
-        .truncate:nth-of-type(n) {
+        .descr:nth-of-type(n) {
+            @include truncate(14);
             margin-top: 0rem;
             span {
                 font-weight: 600;

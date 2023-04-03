@@ -204,14 +204,6 @@ body .descr:not(:first-of-type) {
     }
 }
 
-.truncate {
-    margin: 0;
-    -webkit-line-clamp: 14;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
 // * SERVICE CLASSES FOR LOAD ITEMS
 
 .vacancy-card__list-item, .book-nav-item {

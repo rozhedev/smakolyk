@@ -12,6 +12,14 @@
     box-shadow: $card-inset-shadow;
 }
 
+@mixin truncate($line-count) {
+    margin: 0;
+    -webkit-line-clamp: $line-count;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 @mixin centering {
     display: flex;
     justify-content: center;

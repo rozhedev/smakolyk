@@ -28,3 +28,8 @@ export const ID_LIST = {
         prevButton: "prev-button",
     },
 }
+
+// * BREAKPOINTS
+export const BP_LIST = {
+    sm: 736
+}

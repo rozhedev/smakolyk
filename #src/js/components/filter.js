@@ -1,6 +1,5 @@
-import { TEXT_CONTENT, CLASS_LIST, STATE_LIST } from '../values';
+import { TEXT_CONTENT, CLASS_LIST, STATE_LIST, BP_LIST } from '../values';
 
-const filterBody = document.getElementById("filter-body");
 const detailsFilter = document.getElementById("details-filter");
 const filterBtn = document.getElementById("filter-btn");
 
@@ -10,17 +9,17 @@ const tagBoxAdded = document.getElementById("filter-tagbox-added");
 
 function lockFilterBody(filter, {lock}) {
     if (filter && !filter.open) {
-        console.log(true);
         document.body.classList.add(lock);
     } else {
         document.body.classList.remove(lock);
     }
 }
 
-filterBtn.addEventListener("click", (e) => {
-    console.log(e);
-    lockFilterBody(detailsFilter, STATE_LIST);
-})
+if (filterBtn && window.innerWidth < BP_LIST.sm) {
+    filterBtn.addEventListener("click", (e) => {
+        lockFilterBody(detailsFilter, STATE_LIST);
+    })   
+}
 
 // * TAG ADDING
 

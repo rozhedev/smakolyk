@@ -1,0 +1,59 @@
+.book-card {
+    @include card-effect;
+    display: flex;
+    padding: 1.33rem;
+    @include bp(lg) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include bp(sm) {
+        width: 100%;
+    }
+
+    &__content {
+        text-align: justify;
+        padding-left: 0.8rem;
+        @include bp(lg) {
+            margin-top: 1.5rem;
+            padding-left: 0;
+        }
+    }
+    &__img {
+        width: 16.66rem;
+        aspect-ratio: 4 / 5;
+        padding-right: 1rem;
+        border-right: 0.0625rem solid $light-gray-color;
+        @include bp(xl) {
+            width: 14rem;
+            padding-right: 0;
+            border-right: none;
+        }
+        @include bp(xs) {
+            width: 100%
+        }
+    }
+    .text-subtitle {
+        text-indent: 1.5rem;
+    }
+    & .btn {
+        margin: 1.5rem auto 0;
+        width: 70%;
+    }
+    .update-item-log {
+        margin-top: 0.5rem;
+    }
+    .descr:nth-child(n) {
+        @include truncate(7);
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+.update-item-log {
+    span {
+        font-weight: 600;
+    }
+}
