@@ -11,3 +11,4 @@ import "./components/pagination";
 import "./components/burger";
 import "./components/loadmore";
 import "./components/readmore";
+import "./components/filter";

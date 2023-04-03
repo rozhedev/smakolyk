@@ -19,8 +19,8 @@
                 <div class="container">
                     <h2 class="h2">Читальня</h2>
                     <div class="inner">
-                        <details class="details filter" open>
-                            <summary class="summary filter__btn">
+                        <details class="details filter" id="details-filter">
+                            <summary class="summary filter__btn" id="filter-btn">
                                 <div type="button" class="btn btn--little">
                                     <span>Фільтри</span>
                                     <div class="btn__icons">
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                             </summary>
-                            <form class="filter__body container">
+                            <form class="filter__body container" id="filter-body">
                                 <div class="filter__body-item">
                                     <h5 class="text-subtitle">Жанр твору:</h5>
                                     <div class="form-conroller checkbox-group">
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="filter__body-item tag-container">
                                     <h5 class="text-subtitle">Пошук по тегам:</h5>
-                                    <div class="tagbox">
+                                    <div class="tagbox" id="filter-tagbox">
                                         <div class="tag-item text-subtitle">
                                             <svg width="24" height="24" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M32 12V52" stroke-width="4" />
@@ -282,7 +282,7 @@
                                                 </svg>
                                             </div>
                                         </button>
-                                        <div class="tagbox-added__inner">
+                                        <div class="tagbox-added__inner"  id="filter-tagbox-added">
                                             <div class="tag-item _added text-subtitle">
                                                 <svg width="24" height="24" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M32 12V52" stroke-width="4" />

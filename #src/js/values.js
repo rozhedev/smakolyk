@@ -1,7 +1,9 @@
 export const STATE_LIST = {
     show: "_show",
     hide: "_hide",
-    active: "_active"
+    active: "_active",
+    added: "_added",
+    lock: "_lock",
 }
 
 export const TEXT_CONTENT = {
