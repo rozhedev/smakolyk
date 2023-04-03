@@ -43,14 +43,6 @@
     }
     &-item {
         position: relative;
-        &:nth-child(2n + 1) .h1,
-        &:nth-of-type(2n + 1) .h2 {
-            color: $dark-color;
-        }
-        &:nth-of-type(2n) .h1,
-        &:nth-of-type(2n) .h2 {
-            color: $text-light-color;
-        }
         &__content {
             position: absolute;
             margin: 10rem auto 0;
@@ -77,6 +69,16 @@
                 aspect-ratio: 1 / 2;
             }
         }
+    }
+    &-item--light .h1,
+    &-item--light .h2 {
+        color: $text-light-color;
+        text-shadow: 2px 2px 3px $dark-color, 0px 0px 5px $dark-color;
+    }
+    &-item--dark .h1,
+    &-item--dark .h2 {
+        color: $dark-color;
+        text-shadow: 2px 2px 3px $text-light-color, 0px 0px 5px $text-light-color;
     }
     .h2 {
         font-size: 1.75rem;

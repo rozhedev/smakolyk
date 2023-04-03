@@ -101,7 +101,7 @@
             padding: $body-padding-x $body-padding-y;
             gap: 1rem 2rem;
             max-height: 50vh;
-            box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 20px rgba(255, 255, 255, 1);
+            box-shadow: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 20px rgba(255, 246, 244, 0.9);
             border: 0.125rem solid $dark-gray-color;
 
             @include bp(xl) {

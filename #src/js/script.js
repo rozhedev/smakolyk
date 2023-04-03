@@ -2,8 +2,7 @@
 import "./libs/swiper";
 
 // * MODULES
-import "./modules/example";
-import "./modules/validation";
+// import "./modules/example";
 
 // * COMPONENTS
 import "./components/preloader";
@@ -12,3 +11,4 @@ import "./components/burger";
 import "./components/loadmore";
 import "./components/readmore";
 import "./components/filter";
+import "./components/adblock";

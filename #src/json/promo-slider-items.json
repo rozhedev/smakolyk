@@ -3,42 +3,56 @@
         "title": "Смаколики",
         "subtitle": "Команда перекладачів",
         "imgPath": "img/photos/promo-slider/promo.jpg",
-        "imgAlt": "promo"
+        "imgAlt": "promo",
+        "themeClass": "promo-slider-item--dark"
     },
     {  
         "title": "Смаколики",
         "subtitle": "Команда перекладачів",
         "imgPath": "img/photos/promo-slider/slide3.png",
-        "imgAlt": "slide3"
+        "imgAlt": "slide3",
+        "themeClass": "promo-slider-item--light"
     },
     {  
         "title": "Смаколики",
         "subtitle": "Команда перекладачів",
         "imgPath": "img/photos/promo-slider/slide4.png",
-        "imgAlt": "slide4"
+        "imgAlt": "slide4",
+        "themeClass": "promo-slider-item--dark"
     },
     {  
         "title": "Смаколики",
         "subtitle": "Команда перекладачів",
         "imgPath": "img/photos/promo-slider/slide2.png",
-        "imgAlt": "slide2"
-    },
-    {  
-        "title": "Смаколики",
-        "subtitle": "Команда перекладачів",
-        "imgPath": "img/photos/promo-slider/slide5.png",
-        "imgAlt": "slide5"
+        "imgAlt": "slide2",
+        "themeClass": "promo-slider-item--light"
     },
     {  
         "title": "Смаколики",
         "subtitle": "Команда перекладачів",
         "imgPath": "img/photos/promo-slider/slide7.png",
-        "imgAlt": "slide7"
+        "imgAlt": "slide7",
+        "themeClass": "promo-slider-item--dark"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide5.png",
+        "imgAlt": "slide5",
+        "themeClass": "promo-slider-item--light"
+    },
+    {  
+        "title": "Смаколики",
+        "subtitle": "Команда перекладачів",
+        "imgPath": "img/photos/promo-slider/slide6.png",
+        "imgAlt": "slide6",
+        "themeClass": "promo-slider-item--dark"
     },
     {  
         "title": "Смаколики",
         "subtitle": "Команда перекладачів",
         "imgPath": "img/photos/promo-slider/slide8.png",
-        "imgAlt": "slide8"
+        "imgAlt": "slide8",
+        "themeClass": "promo-slider-item--light"
     }
 ]
