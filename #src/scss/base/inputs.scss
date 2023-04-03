@@ -1,28 +1,3 @@
-// * Allegro form style
-
-.form-wrapper {
-    width: 400px;
-    max-width: 100%;
-    margin: 40px auto;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(17, 17, 17, 0.3);
-}
-
-.form {
-    padding: 30px;
-}
-
-.form-conroller__message {
-    visibility: hidden;
-}
-
-.test > * {
-    margin-top: 2rem;
-}
-
-// *_________________________
-
 .btn {
     position: relative;
     display: flex;

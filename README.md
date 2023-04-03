@@ -1,18 +1,17 @@
-# Start template
+# Smakolyk
 
-Description
+Smakolyk - it's simple online-library website.
+Consist of six pages:
+* Main
+* About
+* News
+* Catalog
+* Book-description page
+* Book-reading page
 
-## Features
+All pages have 4 adaptive versions.
 
-* List of features
-
-## Demo
-
-**Some page page**
-
-![main-page](blob/main-demo.png)
-
-## Usage
+## Template usage
 
 I use an improved Gulp-based build taken from this video: [Click](https://youtu.be/qSZvGlIKGPg)
 
@@ -81,12 +80,13 @@ project
 │   │
 │   └───html                      # All .html files
 │   |   └───components            # Components layout (e.g. _news-card.html)
+│   |   └───chunks                # Page fragments (e.g. _footer.html)
 |   |
 │   └───img                       # All images
 |   |   └───...    
 |   |
 │   └───js                        # All .js files
-│   |   └───common                # Reusable function and common functionality
+│   |   └───libs                  # Libs configs
 │   |   └───components            # Components logic
 │   |   └───data                  # For saving reusable data objects
 |   |       script.js             # For import files
