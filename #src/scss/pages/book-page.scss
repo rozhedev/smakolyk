@@ -25,15 +25,22 @@
             // width: inherit;
             // position: fixed;
             // top: 9.5rem; 
-            background-color: $text-light-color;
             padding: 0rem 0.75rem;
+            background-color: $text-light-color;
             @include bp(md) {
                 position: static;
                 padding: 0;
             }
         }
-        &__body {
-            // * FIXED NAV
+        &__pinned .link {
+            color: $dark-color;
+            text-decoration: underline;
+            @include hover {
+                color: $secondary-accent-color;
+            }
+        }
+        // * FIXED NAV
+        // &__body {
             // max-height: 300px;
             // overflow-y: scroll;
             // @include bp(xl) {
@@ -46,7 +53,7 @@
             //     max-height: initial;
             //     overflow-y: visible;
             // }
-        }
+        // }
 
         .aside-link--big {
             margin-bottom: 0.75rem;
