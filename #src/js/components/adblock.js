@@ -12,17 +12,17 @@ for (let item of adClasses) {
 
 let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
 
-setInterval(() => {
-    if (!advertPopup.classList.contains(STATE_LIST.show)) {
+if (advertPopup && !advertPopup.classList.contains(STATE_LIST.show)) {
+    setInterval(() => {
         if (getProperty == "none") {
             advertPopup.classList.add(STATE_LIST.show);
             document.body.classList.add(STATE_LIST.lock);
-        } else { 
-            advertPopup.classList.remove(STATE_LIST.show); 
+        } else {
+            advertPopup.classList.remove(STATE_LIST.show);
             document.body.classList.remove(STATE_LIST.lock);
         }
-    }
-}, showInterval)
+    }, showInterval);
+}
 
 if (button) {
     button.addEventListener("click", () => {

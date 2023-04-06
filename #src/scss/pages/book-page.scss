@@ -1,22 +1,62 @@
 .book-page {
     .container {
+        position: relative;
         display: flex;
+        align-items: stretch;
         justify-content: space-between;
         @include bp(md) {
             flex-direction: column-reverse;
         }
     }
     .aside-nav {
-        width: clamp((map-get($container-max-widths, xxl) / 12) * 4, 33%, map-get($container-max-widths, xs));
+        flex-shrink: 0;
+        width: clamp(map-get($container-max-widths, xs), 33%, (map-get($container-max-widths, xxl) / 12) * 4);
+        @include bp(xl) {
+            width: clamp(map-get($container-max-widths, xs), 33%, (map-get($container-max-widths, xl) / 12) * 4);
+        }
+        @include bp(lg) {
+            width: clamp(map-get($container-max-widths, xs), 33%, (map-get($container-max-widths, lg) / 12) * 4);
+        }
         @include bp(md) {
             width: clamp(map-get($container-max-widths, xs), 100%, map-get($container-max-widths, md));
         }
+        &__inner {
+            width: inherit;
+            position: fixed;
+            top: 9.5rem; 
+            background-color: $text-light-color;
+            padding: 0rem 0.75rem;
+            @include bp(md) {
+                position: static;
+                padding: 0;
+            }
+        }
+        &__body {
+            max-height: 300px;
+            overflow-y: scroll;
+            @include bp(xl) {
+                max-height: 420px;
+            }
+            @include bp(lg) {
+                max-height: 500px;
+            }
+            @include bp(md) {
+                max-height: initial;
+                overflow-y: visible;
+            }
+        }
 
-        summary.aside-link {
+        .aside-link--big {
             margin-bottom: 0.75rem;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
             line-height: 2.25rem;
+        }
+        & > .aside-link--big {
+            color: $dark-color;
+            &:hover {
+                color: $secondary-accent-color;
+            }
         }
     }
     .book-content {
@@ -30,7 +70,7 @@
         );
         @include bp(md) {
             margin-left: 0;
-            margin-bottom: $grid-gap * 2;
+            margin-bottom: $grid-gap * 1.5;
             width: clamp(map-get($container-max-widths, xs), 100%, map-get($container-max-widths, md));
         }
         &__subtitle {
@@ -42,34 +82,43 @@
                 font-size: 1.25rem;
             }
         }
-        &__footer {
+        &__footer-inner {
             margin-top: 2rem;
+            width: 100%;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
 
-            form:not(:first-of-type) {
-                margin-left: $grid-gap;
-                @include bp(sm){
-                    margin-left: 0;
+            li:not(:first-of-type) {
+                margin-left: 1.5rem;
+                @include bp(lg) {
+                    margin-left: 1rem;
+                }
+                @include bp(xs) {
+                    margin-left: 0rem;
                 }
             }
-            .btn {
-                padding: 0.33rem 1rem;
-                font-size: 1.15rem;
-                font-weight: 500;
-            }
-            @include bp(sm) {
-                form {
-                    flex-grow: 1;
-                    width: 100%;
-                    align-items: start;
+
+            // * BOOK PARTS NAVIGATION
+            .link {
+                display: inline-block;
+                &.previous-part::before,
+                &.next-part::after {
+                    display: inline-block;
                 }
-                form:not(:first-of-type) {
-                    margin-top: calc($grid-gap * 1.2);
+                &.previous-part::before {
+                    content: '\25B2';
+                    margin-right: 0.5rem;
+                    transform: rotate(-90deg);
                 }
-                .btn {
-                    width: 100%;
-                    justify-content: center;
+                &.next-part::after {
+                    content: '\25B2';
+                    margin-left: 0.5rem;
+                    transform: rotate(90deg);
+                }
+                &:nth-of-type(-n + 5) {
+                    margin-top: 0.75rem;
                 }
             }
         }

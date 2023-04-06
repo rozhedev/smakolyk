@@ -1,14 +1,14 @@
 // * DEFAULT 
 
-html::-webkit-scrollbar {
+html::-webkit-scrollbar, .aside-nav__body::-webkit-scrollbar {
     width: $scroll-width;
  }
 
-html::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track, .aside-nav__body::-webkit-scrollbar-track {
   background-color: lightgray;
 }
 
-html::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb, .aside-nav__body::-webkit-scrollbar-thumb {
   background: darkgrey;
   border-radius: 999px;
 }

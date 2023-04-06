@@ -15,7 +15,7 @@
         <div class="page book-page" id="book-page">
             <div class="container">
                 @@include("chunks/_book-aside.html", {
-                    "title": "Навігація по тому",
+                "title": "Навігація по тому",
                 })
                 <section class="section book-content" id="book-content">
                     <h3 class="h3">Асаґірі Кафка «Буревісник»</h3>
@@ -45,18 +45,12 @@
                             non deserunt ullamco est sit aliqua dolor. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint est
                             sit. Amet minim mollit non deserunt ullamco est sit aliqua dolor.
                         </p>
-                        <div class="book-content__footer">
-                            <form action="#">
-                                <button type="submit" class="btn btn--little">
-                                    <span>Попередній розділ</span>
-                                </button>
-                            </form>
-                            <form action="#">
-                                <button type="submit" class="btn btn--little">
-                                    <span>Наступний розділ</span>
-                                </button>
-                            </form>
-                        </div>
+                        <nav class="book-content__footer">
+                            <ul class="book-content__footer-inner">
+                                <li><a href="#" class="link previous-part">Попередній розділ</a></li>
+                                <li><a href="#" class="link next-part">Наступний розділ</a></li>
+                            </ul>
+                        </nav>
                     </article>
                 </section>
             </div>

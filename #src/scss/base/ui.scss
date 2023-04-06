@@ -89,7 +89,7 @@ main.page {
 }
 
 .aside-link {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 2.33rem;
     color: $dark-color;
@@ -112,9 +112,16 @@ main.page {
     color: $secondary-accent-color;
     text-decoration: underline;
     cursor: pointer;
+    transition: $transition;
 
     @include hover {
         text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &:visited {
+        color: rgba($color: $secondary-accent-color, $alpha: 0.66);
     }
 }
 
