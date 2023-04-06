@@ -21,9 +21,10 @@
             width: clamp(map-get($container-max-widths, xs), 100%, map-get($container-max-widths, md));
         }
         &__inner {
-            width: inherit;
-            position: fixed;
-            top: 9.5rem; 
+            // * FIXED NAV
+            // width: inherit;
+            // position: fixed;
+            // top: 9.5rem; 
             background-color: $text-light-color;
             padding: 0rem 0.75rem;
             @include bp(md) {
@@ -32,18 +33,19 @@
             }
         }
         &__body {
-            max-height: 300px;
-            overflow-y: scroll;
-            @include bp(xl) {
-                max-height: 420px;
-            }
-            @include bp(lg) {
-                max-height: 500px;
-            }
-            @include bp(md) {
-                max-height: initial;
-                overflow-y: visible;
-            }
+            // * FIXED NAV
+            // max-height: 300px;
+            // overflow-y: scroll;
+            // @include bp(xl) {
+            //     max-height: 420px;
+            // }
+            // @include bp(lg) {
+            //     max-height: 500px;
+            // }
+            // @include bp(md) {
+            //     max-height: initial;
+            //     overflow-y: visible;
+            // }
         }
 
         .aside-link--big {
@@ -59,6 +61,8 @@
             }
         }
     }
+
+    // * BOOK CONTENT
     .book-content {
         margin-left: $grid-gap;
 
@@ -68,6 +72,13 @@
             66%,
             map-get($container-max-widths, xs)
         );
+        .inner {
+            width: auto;
+            height: auto;
+            max-height: 600px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
         @include bp(md) {
             margin-left: 0;
             margin-bottom: $grid-gap * 1.5;
